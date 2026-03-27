@@ -1,3 +1,5 @@
+Built following discussion in CRIU checkpointctl issue #211.
+
 # Forensic analysis tool for CRIU container checkpoints
 
 **forensic-checkpointctl** is a small Python tool that analyzes JSON produced by [**checkpointctl**](https://github.com/checkpoint-restore/checkpointctl) (`inspect --all --format=json`). It applies **explicit, heuristic** checks for suspicious processes, sensitive file paths, and basic socket/port patterns—useful for triage, not as a final verdict.
