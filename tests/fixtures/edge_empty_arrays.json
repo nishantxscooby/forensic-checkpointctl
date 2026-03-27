@@ -1,0 +1,14 @@
+[
+  {
+    "container_name": "empty-arrays",
+    "image": "x",
+    "id": "1",
+    "runtime": "r",
+    "created": "2026-01-01T00:00:00Z",
+    "engine": "Podman",
+    "checkpoint_size": { "total_size": 0 },
+    "process_tree": null,
+    "file_descriptors": [],
+    "sockets": []
+  }
+]

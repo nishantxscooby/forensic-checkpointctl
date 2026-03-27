@@ -1,0 +1,14 @@
+[
+  {
+    "container_name": "bad-types",
+    "image": "i",
+    "id": "1",
+    "runtime": "r",
+    "created": "2026-01-01T00:00:00Z",
+    "engine": "Podman",
+    "checkpoint_size": {},
+    "process_tree": "not-a-dict",
+    "file_descriptors": "not-a-list",
+    "sockets": [{ "pid": "x", "open_sockets": null }]
+  }
+]

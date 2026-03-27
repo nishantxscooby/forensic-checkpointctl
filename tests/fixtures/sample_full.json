@@ -1,0 +1,64 @@
+[
+  {
+    "container_name": "demo",
+    "image": "docker.io/library/alpine:latest",
+    "id": "abc123deadbeef",
+    "runtime": "crun",
+    "created": "2026-01-01T00:00:00Z",
+    "engine": "Podman",
+    "checkpoint_size": { "total_size": 1000 },
+    "process_tree": {
+      "pid": 1,
+      "command": "bash",
+      "cmdline": "bash -c /bin/sh -c wget http://x/",
+      "task_state": "Running",
+      "children": [
+        {
+          "pid": 42,
+          "command": "nc",
+          "cmdline": "nc -l -p 4444",
+          "task_state": "Running",
+          "children": []
+        }
+      ]
+    },
+    "file_descriptors": [
+      {
+        "pid": 1,
+        "open_files": [
+          { "type": "reg", "fd": "reg 3", "path": "/etc/passwd" },
+          { "type": "reg", "fd": "reg 4", "path": "/root/.bash_history" }
+        ]
+      }
+    ],
+    "sockets": [
+      {
+        "pid": 42,
+        "open_sockets": [
+          {
+            "protocol": "TCP",
+            "data": {
+              "type": "TCP",
+              "src": "0.0.0.0",
+              "src_port": 4444,
+              "dst": "0.0.0.0",
+              "dst_port": 0,
+              "state": "LISTEN"
+            }
+          },
+          {
+            "protocol": "TCP",
+            "data": {
+              "type": "TCP",
+              "src": "10.0.0.2",
+              "src_port": 443,
+              "dst": "93.184.216.34",
+              "dst_port": 443,
+              "state": "ESTABLISHED"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
